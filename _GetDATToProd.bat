@@ -14,4 +14,5 @@ rem only copy *.dat files
 ROBOCOPY %SOURCE_DIR% %DEST_DIR1% *.dat
 ROBOCOPY %SOURCE_DIR% %DEST_DIR2% *.dat
 
-pause
+:: delete data in the file OrdersResultsT1.csv related to the updated systems, also disable sytems in T3
+"C:\Program Files\R\R-3.5.1\bin\R.exe" CMD BATCH "D:\TradingRepos\R_tradecontrol\_OT\delete_data_of_re_trained_bots.R"
